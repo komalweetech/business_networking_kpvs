@@ -86,7 +86,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               fontWeight: FontWeight.w500,
                               color: Colors.black),
                           decoration: InputDecoration.collapsed(
-                            hintText: "mobile number",
+                            hintText: " number",
                           ),
                         ),
                       ),
