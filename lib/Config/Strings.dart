@@ -9,4 +9,5 @@ class AppStrings{
   static String otp_text1 = "Didn't receive OTP? ";
   static String otp_text2 = "Resend OTP";
   static String otp_text3 = "Change Number";
+  static String profile_title = "Profile";
 }

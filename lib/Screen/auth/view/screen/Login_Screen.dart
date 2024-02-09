@@ -1,11 +1,16 @@
 import 'dart:async';
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:kpvs/Config/BaseColors.dart';
 import 'package:kpvs/Config/Images.dart';
 import 'package:kpvs/Config/Strings.dart';
+import 'package:kpvs/Screen/auth/services/otp_api.dart';
 import 'package:kpvs/Utils/ScreenUtils.dart';
 import 'package:loading_indicator/loading_indicator.dart';
+
+import '../../dependencies/auth_dependencies.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -15,25 +20,46 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+
+  //Mobile number validate.
+  String? validatePhoneNumber(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Mobile number is required';
+    }
+    // Custom validation logic for a 10-digit Indian mobile number
+    if (value.length != 10 || !RegExp(r'^[6789]\d{9}$').hasMatch(value)) {
+      return 'Invalid mobile number';
+    }
+    return null;
+  }
+
+
+  void otpApi() async {
+    final mobileNumber = kAuthController.phoneNumberController.text;
+
+    // var response = await OtpApi.postApi(mobileNumber);
+    // print("response of login ==== $response");
+  }
+
   @override
   Widget build(BuildContext context) {
-    buildShowDialog(BuildContext context) {
-      return showDialog(
-          context: context,
-          barrierDismissible: false,
-          builder: (BuildContext context) {
-            return Center(
-              child: Container(
-                height: 45.r,
-                width: 45.r,
-                child: LoadingIndicator(
-                  indicatorType: Indicator.circleStrokeSpin,
-                  colors: [Colors.black],
-                ),
-              ),
-            );
-          });
-    }
+    // buildShowDialog(BuildContext context) {
+    //   return showDialog(
+    //       context: context,
+    //       barrierDismissible: false,
+    //       builder: (BuildContext context) {
+    //         return Center(
+    //           child: Container(
+    //             height: 45.h,
+    //             width: 45.w,
+    //             child:  LoadingIndicator(
+    //               indicatorType: Indicator.circleStrokeSpin,
+    //               colors: [AppColor.themeColor],
+    //             ),
+    //           ),
+    //         );
+    //       });
+    // }
 
     return Scaffold(
         body: SafeArea(
@@ -44,7 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Text(
               AppStrings.AppName,
               style: TextStyle(
-                  color: AppColor.themeColor,
+                  color: AppColor.kPrimaryColor,
                   fontSize: 50.r,
                   fontWeight: FontWeight.bold),
             ),
@@ -86,7 +112,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               fontWeight: FontWeight.w500,
                               color: Colors.black),
                           decoration: InputDecoration.collapsed(
-                            hintText: " number",
+                            hintText: "mobile number",
                           ),
                         ),
                       ),
@@ -98,22 +124,34 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 15.h,
               ),
               GestureDetector(
-                onTap: () {
+                onTap: () async {
                   print("object === 111");
-                  buildShowDialog(context);
+                  // buildShowDialog(context);
                   FocusScope.of(context).requestFocus(new FocusNode());
+                  // // Make API call to send OTP
+                  // bool otpSent = await sendOTP(); // Implement sendOTP() to call your API
+                  //
+                  // // Close loading dialog
+                  // Navigator.pop(context);
+                  //
+                  // if(otpSent){
+                  //  // Navigate to OTP screen if OTP is sent successfully
+                  //   Get.toNamed('/otp');
+                  // }else {
+                  //   print("api is not successfully");
+                  //   log("api is not successfully");
+                  // }
 
-                  Timer(Duration(milliseconds: 4000), () {
-                    Navigator.pushReplacementNamed(
-                        context, ScreenUtils.GetOtpScreen);
-                  });
+                  Get.toNamed('/otp');
+
+
                 },
                 child: Container(
                   margin: EdgeInsets.symmetric(horizontal: 30.r),
                   height: 40.h,
                   width: 1.sw,
                   decoration: BoxDecoration(
-                    color: AppColor.themeColor,
+                    color: AppColor.kPrimaryColor,
                     borderRadius: BorderRadius.circular(10.r),
                   ),
                   child: Center(
@@ -129,7 +167,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Row(
                 children: [
                   Expanded(
-                    child: new Container(
+                    child: Container(
                         margin: const EdgeInsets.only(left: 35.0, right: 15.0),
                         child: Divider(
                           color: Colors.black,
@@ -142,7 +180,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         TextStyle(fontSize: 15.r, fontWeight: FontWeight.bold),
                   ),
                   Expanded(
-                    child: new Container(
+                    child: Container(
                         margin: const EdgeInsets.only(left: 15.0, right: 35.0),
                         child: Divider(
                           color: Colors.black,
@@ -160,7 +198,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: TextStyle(
                           fontSize: 15.r,
                           fontWeight: FontWeight.bold,
-                          color: AppColor.themeColor),
+                          color: AppColor.kPrimaryColor),
                     )
                   ]))
             ],

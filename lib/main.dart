@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kpvs/Screen/SplashScreen.dart';
-import 'package:kpvs/Screen/auth/LoginScreen.dart';
-import 'package:kpvs/Screen/auth/OTPScreen.dart';
+import 'package:kpvs/Screen/auth/view/screen/Login_Screen.dart';
+import 'package:kpvs/Screen/auth/view/screen/OTP_Screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:kpvs/Screen/auth/view/screen/singUp_screen.dart';
 import 'package:kpvs/Utils/ScreenUtils.dart';
 import 'firebase_options.dart';
+import 'package:get/get.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,17 +25,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
    return ScreenUtilInit(builder: (context, child) {
-     return MaterialApp(
+     return GetMaterialApp(
+       debugShowCheckedModeBanner: false,
          title: 'Flutter Demo',
          theme: ThemeData(
          ),
         //  home:  LoginScreen(),
-          initialRoute: ScreenUtils.SplashScreen,
-         routes: {
-          ScreenUtils.LoginScreen:(context) => LoginScreen(),
-          ScreenUtils.GetOtpScreen:(context) => OTPScreen(),
-          ScreenUtils.SplashScreen:(context) => SplashScreen()
-         },
+       initialRoute: '/splash', //Set initial route.
+       getPages: [
+         GetPage(name: '/splash', page: () => SplashScreen()),
+         GetPage(name: '/login', page: () => LoginScreen()),
+         GetPage(name: '/otp', page: () => OTPScreen()),
+         GetPage(name: '/singUp', page:() =>  SingUPScreen()),
+       ],
      );
    },);
   }

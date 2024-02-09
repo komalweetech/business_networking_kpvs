@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:kpvs/Config/BaseColors.dart';
 import 'package:kpvs/Config/Strings.dart';
 import 'package:kpvs/Utils/ScreenUtils.dart';
@@ -16,15 +17,18 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Timer(Duration(seconds: 3),
+          () {
+        // Navigator.pushReplacementNamed(context, ScreenUtils.LoginScreen);
+        Get.toNamed('/login'); //Navigate to login screen.
+      },
+    );
+  }
+  @override
   Widget build(BuildContext context) {
-      Timer(
-            Duration(seconds: 3),
-            () {
-              Navigator.pushReplacementNamed(context, ScreenUtils.LoginScreen);
-            },
-           );
-
-
     return Scaffold(
         body: SafeArea(
           child: Padding(
@@ -35,17 +39,17 @@ class _SplashScreenState extends State<SplashScreen> {
                   child: Text(
                     AppStrings.AppName,
                     style: TextStyle(
-                        color: AppColor.themeColor,
+                        color: AppColor.kPrimaryColor,
                         fontSize: 50.r,
                         fontWeight: FontWeight.bold),
                   ),
                 ),
                 Container(
-                  height: 45.r,
-                  width: 45.r,
-                  child: LoadingIndicator(
+                  height: 45.h,
+                  width: 45.w,
+                  child:  LoadingIndicator(
                       indicatorType: Indicator.circleStrokeSpin,
-                  colors: [Colors.black],),
+                  colors: [AppColor.kPrimaryColor],),
                 ),
                 Column(
                   children: [
