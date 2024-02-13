@@ -173,11 +173,7 @@ class _SingUPScreenState extends State<SingUPScreen> {
                   labelText: "City",
                   items: const ['Surat','Mumbai','Delhi','Kolkata','Chennai','Bangalore','Hyderabad','Ahmedabad','Pune',],
               ),
-              ElevatedButton(
-                  onPressed: () {
-                    Get.toNamed('/dashBoard');
-                  },
-                  child: Text("Next"))
+              SizedBox(height: 20.h,),
             ],
           ),
 

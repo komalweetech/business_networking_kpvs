@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:kpvs/Config/BaseColors.dart';
 import 'package:kpvs/Config/Images.dart';
 import 'package:kpvs/module/aboutUs_screen/view/screen/aboutUs_screen.dart';
+import 'package:kpvs/module/auth/view/screen/singUp_screen.dart';
 import 'package:kpvs/module/business_screen/view/screen/add_business.dart';
 import 'package:kpvs/module/contact_us/view/screen/contactUs_screen.dart';
 import 'package:kpvs/module/group/view/screen/group_screen.dart';
-import 'package:kpvs/module/home/view/screen/home_screen.dart';
 import 'package:kpvs/module/settings/view/screen/settings_screen.dart';
 
 class DashboardDrawerWidgets extends StatefulWidget {
@@ -19,76 +19,85 @@ class _DashboardDrawerWidgetsState extends State<DashboardDrawerWidgets> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: Color.fromRGBO(242, 242, 242, 1),
+      backgroundColor: const Color.fromRGBO(242, 242, 242, 1),
       elevation: 20.0,
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
-          UserAccountsDrawerHeader(accountName:Text("Komal kathiriya") , accountEmail: Text("komalweetech211@gmail.com"),
+          UserAccountsDrawerHeader(
+            accountName:const Text("Komal kathiriya") ,
+            accountEmail: const Text("komalweetech211@gmail.com"),
               currentAccountPicture: CircleAvatar(
-                child: Image.asset(AppImages.indian_flag),
                 backgroundColor:Colors.white,
+                child: Image.asset(AppImages.indian_flag),
               ),
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [Colors.blue, Colors.green], // Your gradient colors
-              ),
+            decoration:  BoxDecoration(
+              color: AppColor.kPrimaryColor
             ),
           ),
           ListTile(
-            leading: Icon(Icons.business),
-            title: Text("Add Your Business"),
+            leading: const Icon(Icons.add),
+            title: const Text("My Profile"),
+            onTap: () {
+              print("Profile ");
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SingUPScreen()),
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.business),
+            title: const Text("Add Your Business"),
             onTap: () {
               print("Categories Clicked");
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => AddBusinessScreen()),
+                MaterialPageRoute(builder: (context) => const AddBusinessScreen()),
               );
             },
           ),
           ListTile(
-            leading: Icon(Icons.group),
-            title: Text("Group"),
+            leading: const Icon(Icons.group),
+            title: const Text("Group"),
             onTap: () {
               print("Add Clicked");
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => GroupScreen()),
+                MaterialPageRoute(builder: (context) => const GroupScreen()),
               );
             },
           ),
           ListTile(
-            leading: Icon(Icons.settings),
-            title: Text("Setting"),
+            leading: const Icon(Icons.settings),
+            title: const Text("Setting"),
             onTap: () {
               print("About Clicked");
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => SettingsScreen()),
+                MaterialPageRoute(builder: (context) => const SettingsScreen()),
               );
             },
           ),
           ListTile(
-            leading: Icon(Icons.person),
-            title: Text("About Us"),
+            leading: const Icon(Icons.person),
+            title: const Text("About Us"),
             onTap: () {
               print("Share Clicked");
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => AboutUsScreen()),
+                MaterialPageRoute(builder: (context) => const AboutUsScreen()),
               );
             },
           ),
           ListTile(
-            leading: Icon(Icons.call),
-            title: Text("Contact Us"),
+            leading: const Icon(Icons.call),
+            title: const Text("Contact Us"),
             onTap: () {
               print("Share Clicked");
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ContactUsScreen()),
+                MaterialPageRoute(builder: (context) => const ContactUsScreen()),
               );
             },
           ),

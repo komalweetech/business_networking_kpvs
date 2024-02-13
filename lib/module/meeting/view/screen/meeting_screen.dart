@@ -10,6 +10,8 @@ class MeetingScreen extends StatefulWidget {
 class _MeetingScreenState extends State<MeetingScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Center(
+      child: Text("Meeting",style: TextStyle(fontSize: 20),),
+    );
   }
 }

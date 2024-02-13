@@ -1,15 +1,25 @@
+
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-class AttendencesScreen extends StatefulWidget {
-  const AttendencesScreen({super.key});
+class AttendancesScreen extends StatefulWidget {
+  const AttendancesScreen({Key? key}) : super(key: key);
 
   @override
-  State<AttendencesScreen> createState() => _AttendencesScreenState();
+  _AttendancesScreenState createState() => _AttendancesScreenState();
 }
 
-class _AttendencesScreenState extends State<AttendencesScreen> {
+class _AttendancesScreenState extends State<AttendancesScreen> {
+
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return  Column(
+      children: [
+
+      ],
+    );
   }
+
 }
+

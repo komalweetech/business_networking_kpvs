@@ -116,7 +116,7 @@ class _OTPScreenState extends State<OTPScreen> {
                                 onTap: ()  {
                                   log("Navigate to signup screen");
                                   try {
-                                    Get.toNamed('/singUp');
+                                    Get.toNamed('/dashBoard');
                                   } catch (e) {
                                     log("Error navigating to signup screen: $e");
                                   }

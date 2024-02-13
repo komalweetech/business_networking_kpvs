@@ -1,36 +1,33 @@
 
-
 import 'package:kpvs/Config/Images.dart';
 
 enum BottomNavBarMenuEnum {
-  addBusiness(
-      iconLink: AppImages.add_Business,
-      selectedIconLink: AppImages.select_add_business,
-      displayName: "Home"),
-  attendences(
-      iconLink: AppImages.attendences,
-      selectedIconLink: AppImages.selected_attendences,
-      displayName: "Pretest"),
-  settings(
-      iconLink: AppImages.settings,
-      selectedIconLink: AppImages.selected_settings,
-      displayName: "Favorite"),
-  meeting(
-      iconLink: AppImages.meeting,
-      selectedIconLink: AppImages.selected_meeting,
-      displayName: "Offers"),
   home(
-      iconLink: AppImages.home,
-      selectedIconLink: AppImages.selected_home,
-      displayName: "Offers");
+      iconData: AppImages.home,
+      selectedIconData: AppImages.selected_home,
+      displayName: "Home"),
+  meeting(
+      iconData: AppImages.meeting,
+      selectedIconData: AppImages.selected_meeting,
+      displayName: "Meeting"),
+  attendences(
+      iconData: AppImages.attendences,
+      selectedIconData: AppImages.selected_attendences,
+      displayName: "Attendances"),
+  wings(
+      iconData: AppImages.wings,
+      selectedIconData: AppImages.selected_wings,
+      displayName: "Wings");
+
 
 
   final String displayName;
-  final String iconLink;
-  final String selectedIconLink;
+  final String iconData;
+  final String selectedIconData;
 
   const BottomNavBarMenuEnum(
       {required this.displayName,
-        required this.iconLink,
-        required this.selectedIconLink});
+        required this.iconData,
+        required this.selectedIconData});
+
 }

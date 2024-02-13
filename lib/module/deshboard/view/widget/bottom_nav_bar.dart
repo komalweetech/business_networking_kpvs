@@ -35,12 +35,12 @@ class BottomNavBarWidget extends StatelessWidget {
                       BottomNavBarMenuEnum.home;
                 },
               ),
-              // Add Business .
+              // Meetings .
               BottomNavBarButton(
-                buttonData: BottomNavBarMenuEnum.addBusiness,
+                buttonData: BottomNavBarMenuEnum.meeting,
                 onTap: () {
                   kDashboardController.selectedBottomNavBarButton.value =
-                      BottomNavBarMenuEnum.addBusiness;
+                      BottomNavBarMenuEnum.meeting;
                 },
               ),
               // Attendences .
@@ -51,22 +51,15 @@ class BottomNavBarWidget extends StatelessWidget {
                       BottomNavBarMenuEnum.attendences;
                 },
               ),
-              // Settings .
+              // Wings .
               BottomNavBarButton(
-                buttonData: BottomNavBarMenuEnum.settings,
+                buttonData: BottomNavBarMenuEnum.wings,
                 onTap: () {
                   kDashboardController.selectedBottomNavBarButton.value =
-                      BottomNavBarMenuEnum.settings;
+                      BottomNavBarMenuEnum.wings;
                 },
               ),
-              // Meetings .
-              BottomNavBarButton(
-                buttonData: BottomNavBarMenuEnum.meeting,
-                onTap: () {
-                  kDashboardController.selectedBottomNavBarButton.value =
-                      BottomNavBarMenuEnum.meeting;
-                },
-              ),
+
               SizedBox(width: 10.w),
             ],
           ),
@@ -101,8 +94,9 @@ class BottomNavBarButton extends StatelessWidget {
                       () => Image.asset(
                     kDashboardController.selectedBottomNavBarButton.value ==
                         buttonData
-                        ? buttonData.selectedIconLink
-                        : buttonData.iconLink,
+                        ? buttonData.selectedIconData
+                        : buttonData.iconData,
+                    color: Colors.white,
                     height: 28.h,
                     width: 28.w,
                   ),
