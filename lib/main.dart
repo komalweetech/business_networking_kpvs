@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:kpvs/Screen/SplashScreen.dart';
-import 'package:kpvs/Screen/auth/view/screen/Login_Screen.dart';
-import 'package:kpvs/Screen/auth/view/screen/OTP_Screen.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:kpvs/Screen/auth/view/screen/singUp_screen.dart';
-import 'package:kpvs/Utils/ScreenUtils.dart';
+import 'package:kpvs/module/deshboard/view/screen/dashboard_screen.dart';
 import 'firebase_options.dart';
 import 'package:get/get.dart';
+import 'module/SplashScreen.dart';
+import 'module/auth/view/screen/Login_Screen.dart';
+import 'module/auth/view/screen/OTP_Screen.dart';
+import 'module/auth/view/screen/singUp_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,6 +37,7 @@ class MyApp extends StatelessWidget {
          GetPage(name: '/login', page: () => LoginScreen()),
          GetPage(name: '/otp', page: () => OTPScreen()),
          GetPage(name: '/singUp', page:() =>  SingUPScreen()),
+         GetPage(name: '/dashBoard', page: () => DashBoardScreen()),
        ],
      );
    },);

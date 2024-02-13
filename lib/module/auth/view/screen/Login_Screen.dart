@@ -6,9 +6,6 @@ import 'package:get/get.dart';
 import 'package:kpvs/Config/BaseColors.dart';
 import 'package:kpvs/Config/Images.dart';
 import 'package:kpvs/Config/Strings.dart';
-import 'package:kpvs/Screen/auth/services/otp_api.dart';
-import 'package:kpvs/Utils/ScreenUtils.dart';
-import 'package:loading_indicator/loading_indicator.dart';
 
 import '../../dependencies/auth_dependencies.dart';
 
