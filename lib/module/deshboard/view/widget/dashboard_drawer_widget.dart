@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:kpvs/Config/BaseColors.dart';
 import 'package:kpvs/Config/Images.dart';
@@ -25,20 +26,7 @@ class _DashboardDrawerWidgetsState extends State<DashboardDrawerWidgets> {
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
-          UserAccountsDrawerHeader(
-            accountName:const Text("Komal kathiriya") ,
-            accountEmail: const Text("komalweetech211@gmail.com"),
-              currentAccountPicture: CircleAvatar(
-                backgroundColor:Colors.white,
-                child: Image.asset(AppImages.indian_flag),
-              ),
-            decoration:  BoxDecoration(
-              color: AppColor.kPrimaryColor
-            ),
-          ),
-          ListTile(
-            leading: const Icon(Icons.add),
-            title:  Text("${AppStrings.drawer_Profile}"),
+          GestureDetector(
             onTap: () {
               print("Profile ");
               Navigator.push(
@@ -46,21 +34,33 @@ class _DashboardDrawerWidgetsState extends State<DashboardDrawerWidgets> {
                 MaterialPageRoute(builder: (context) => const SingUPScreen()),
               );
             },
+            child: UserAccountsDrawerHeader(
+                accountName: const Text("Komal kathiriya"),
+                accountEmail: const Text("komalweetech211@gmail.com"),
+                currentAccountPicture: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  child: Image.asset(AppImages.indian_flag),
+                ),
+                decoration: BoxDecoration(
+                    color: AppColor.kPrimaryColor
+                ),
+            ),
           ),
           ListTile(
             leading: const Icon(Icons.business),
-            title:  Text("${AppStrings.drawer_Business}"),
+            title: Text("${AppStrings.drawer_Business}"),
             onTap: () {
               print("Categories Clicked");
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const AddBusinessScreen()),
+                MaterialPageRoute(
+                    builder: (context) => const AddBusinessScreen()),
               );
             },
           ),
           ListTile(
             leading: const Icon(Icons.group),
-            title:  Text("${AppStrings.drawer_Group}"),
+            title: Text("${AppStrings.drawer_Group}"),
             onTap: () {
               print("Add Clicked");
               Navigator.push(
@@ -71,7 +71,7 @@ class _DashboardDrawerWidgetsState extends State<DashboardDrawerWidgets> {
           ),
           ListTile(
             leading: const Icon(Icons.settings),
-            title:  Text("${AppStrings.drawer_Setting}"),
+            title: Text("${AppStrings.drawer_Setting}"),
             onTap: () {
               print("About Clicked");
               Navigator.push(
@@ -82,7 +82,7 @@ class _DashboardDrawerWidgetsState extends State<DashboardDrawerWidgets> {
           ),
           ListTile(
             leading: const Icon(Icons.person),
-            title:  Text("${AppStrings.drawer_AboutUs}"),
+            title: Text("${AppStrings.drawer_AboutUs}"),
             onTap: () {
               print("Share Clicked");
               Navigator.push(
@@ -93,12 +93,13 @@ class _DashboardDrawerWidgetsState extends State<DashboardDrawerWidgets> {
           ),
           ListTile(
             leading: const Icon(Icons.call),
-            title:  Text("${AppStrings.drawer_Contact}"),
+            title: Text("${AppStrings.drawer_Contact}"),
             onTap: () {
               print("Share Clicked");
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const ContactUsScreen()),
+                MaterialPageRoute(
+                    builder: (context) => const ContactUsScreen()),
               );
             },
           ),

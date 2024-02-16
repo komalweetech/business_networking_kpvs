@@ -39,6 +39,7 @@ dependencies:
   image_cropper: ^5.0.1
   qr_code_scanner: ^1.0.1
 
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -78,6 +79,7 @@ flutter:
     - assets/profile_icon/
     - assets/bottomBar_icon/
     - assets/drawer_icon/
+    - assets/business/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

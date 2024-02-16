@@ -31,4 +31,21 @@ static const String profile_person = "assets/profile_icon/person.png";
 static const String profile_add_user = "assets/profile_icon/addUser.png";
 static const String profile_share = "assets/profile_icon/share.png";
 
+//business screen
+  static const String business_background = "assets/business/business_background.jpg";
+  static const String diamond_business = "assets/business/diamond.jpg";
+  static const String food_business = "assets/business/diamond.jpg";
+  static const String ca_business = "assets/business/diamond.jpg";
+  static const String consulting_business = "assets/business/diamond.jpg";
+  static const String farm_business = "assets/business/diamond.jpg";
+  static const String it_business = "assets/business/diamond.jpg";
+  static const String parlour_business = "assets/business/diamond.jpg";
+  static const String petrol_business = "assets/business/diamond.jpg";
+  static const String sand_business = "assets/business/diamond.jpg";
+  static const String textile_business = "assets/business/diamond.jpg";
+  static const String teaching_business = "assets/business/diamond.jpg";
+  static const String restaurants_business = "assets/business/diamond.jpg";
+
+
+
 }

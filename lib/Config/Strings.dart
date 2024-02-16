@@ -24,7 +24,7 @@ class AppStrings{
   static String official = "Official";
   static String personal = "Personal";
   static String number = "Mobile Number";
-  static String team = "Team";
+  static String Business = "Business";
   static String leads_by = "Leads by";
   static String add_contact = "Add to contact";
   static String share = "Share";

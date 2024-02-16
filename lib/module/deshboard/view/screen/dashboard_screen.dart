@@ -9,7 +9,6 @@ import 'package:kpvs/module/business_screen/view/screen/add_business.dart';
 import 'package:kpvs/module/deshboard/view/widget/dashboard_drawer_widget.dart';
 import 'package:kpvs/module/home/view/screen/home_screen.dart';
 import 'package:kpvs/module/meeting/view/screen/meeting_screen.dart';
-import 'package:kpvs/module/settings/view/screen/settings_screen.dart';
 import 'package:kpvs/module/wings/view/screen/wings_screen.dart';
 
 import '../../../../Utils/enum/ui_enum.dart';
