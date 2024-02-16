@@ -3,20 +3,20 @@ import 'package:kpvs/Config/Images.dart';
 
 enum BottomNavBarMenuEnum {
   home(
-      iconData: AppImages.home,
-      selectedIconData: AppImages.selected_home,
+      iconData: AppImages.bottombar_home,
+      selectedIconData: AppImages.bottombar_selected_home,
       displayName: "Home"),
   meeting(
-      iconData: AppImages.meeting,
-      selectedIconData: AppImages.selected_meeting,
+      iconData: AppImages.bottombar_meeting,
+      selectedIconData: AppImages.bottombar_selected_meeting,
       displayName: "Meeting"),
   attendences(
-      iconData: AppImages.attendences,
-      selectedIconData: AppImages.selected_attendences,
+      iconData: AppImages.bottombar_attendences,
+      selectedIconData: AppImages.bottombar_selected_attendences,
       displayName: "Attendances"),
   wings(
-      iconData: AppImages.wings,
-      selectedIconData: AppImages.selected_wings,
+      iconData: AppImages.bottombar_wings,
+      selectedIconData: AppImages.bottombar_selected_wings,
       displayName: "Wings");
 
 

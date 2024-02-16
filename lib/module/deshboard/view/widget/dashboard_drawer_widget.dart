@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kpvs/Config/BaseColors.dart';
 import 'package:kpvs/Config/Images.dart';
+import 'package:kpvs/Config/Strings.dart';
 import 'package:kpvs/module/aboutUs_screen/view/screen/aboutUs_screen.dart';
 import 'package:kpvs/module/auth/view/screen/singUp_screen.dart';
 import 'package:kpvs/module/business_screen/view/screen/add_business.dart';
@@ -37,7 +38,7 @@ class _DashboardDrawerWidgetsState extends State<DashboardDrawerWidgets> {
           ),
           ListTile(
             leading: const Icon(Icons.add),
-            title: const Text("My Profile"),
+            title:  Text("${AppStrings.drawer_Profile}"),
             onTap: () {
               print("Profile ");
               Navigator.push(
@@ -48,7 +49,7 @@ class _DashboardDrawerWidgetsState extends State<DashboardDrawerWidgets> {
           ),
           ListTile(
             leading: const Icon(Icons.business),
-            title: const Text("Add Your Business"),
+            title:  Text("${AppStrings.drawer_Business}"),
             onTap: () {
               print("Categories Clicked");
               Navigator.push(
@@ -59,7 +60,7 @@ class _DashboardDrawerWidgetsState extends State<DashboardDrawerWidgets> {
           ),
           ListTile(
             leading: const Icon(Icons.group),
-            title: const Text("Group"),
+            title:  Text("${AppStrings.drawer_Group}"),
             onTap: () {
               print("Add Clicked");
               Navigator.push(
@@ -70,7 +71,7 @@ class _DashboardDrawerWidgetsState extends State<DashboardDrawerWidgets> {
           ),
           ListTile(
             leading: const Icon(Icons.settings),
-            title: const Text("Setting"),
+            title:  Text("${AppStrings.drawer_Setting}"),
             onTap: () {
               print("About Clicked");
               Navigator.push(
@@ -81,7 +82,7 @@ class _DashboardDrawerWidgetsState extends State<DashboardDrawerWidgets> {
           ),
           ListTile(
             leading: const Icon(Icons.person),
-            title: const Text("About Us"),
+            title:  Text("${AppStrings.drawer_AboutUs}"),
             onTap: () {
               print("Share Clicked");
               Navigator.push(
@@ -92,7 +93,7 @@ class _DashboardDrawerWidgetsState extends State<DashboardDrawerWidgets> {
           ),
           ListTile(
             leading: const Icon(Icons.call),
-            title: const Text("Contact Us"),
+            title:  Text("${AppStrings.drawer_Contact}"),
             onTap: () {
               print("Share Clicked");
               Navigator.push(

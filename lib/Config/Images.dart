@@ -1,22 +1,34 @@
 class AppImages{
-  static const String indian_flag = "assets/images/indian_flag.png";
+  static const String indian_flag = "assets/icons/indian_flag.png";
+  static const String left_arrow = "assets/icons/back_arrow.png";
+  static const String right_arrow = "assets/icons/right_arrow.png";
 
   // BottomBar icon //unSelected
-static const String add_Business = "assets/images/add_business.png";
-static const String attendences = "assets/images/attendences.png";
-static const String home = "assets/images/home.png";
-static const String settings = "assets/images/settings.png";
-static const String meeting = "assets/images/meeting.png";
-static const String wings = "assets/images/wings.png";
+
+static const String bottombar_attendences = "assets/bottomBar_icon/attendences.png";
+static const String bottombar_home = "assets/bottomBar_icon/home.png";
+static const String bottombar_meeting = "assets/bottomBar_icon/meeting.png";
+static const String bottombar_wings = "assets/bottomBar_icon/wings.png";
 
 //BottomBar icon Selected.
-static const String select_add_business = "assets/images/selected_addBusiness.png";
-static const String selected_attendences = "assets/images/selected_attendences.png";
-static const String selected_home = "assets/images/selected_home.png";
-static const String selected_settings = "assets/images/selected_settings.png" ;
-static const String selected_meeting = "assets/images/selected_meeting.png";
-static const String selected_wings = "assets/images/selected_wings.png";
+
+static const String bottombar_selected_attendences = "assets/bottomBar_icon/selected_attendences.png";
+static const String bottombar_selected_home = "assets/bottomBar_icon/selected_home.png";
+static const String bottombar_selected_meeting = "assets/bottomBar_icon/selected_meeting.png";
+static const String bottombar_selected_wings = "assets/bottomBar_icon/selected_wings.png";
 
 //drawer icon
-static const String drawer_profile = "assets/images/drawer_profile.png";
+static const String drawer_profile = "assets/icons/drawer_profile.png";
+
+//profile image
+static const String profile_boy = "assets/profile_icon/boy.jpg";
+static const String profile_email = "assets/profile_icon/email.png";
+static const String profile_call = "assets/profile_icon/call.png";
+static const String profile_whatsapp = "assets/profile_icon/whatsapp.png";
+static const String profile_star = "assets/profile_icon/star.png";
+static const String profile_team = "assets/profile_icon/team.png";
+static const String profile_person = "assets/profile_icon/person.png";
+static const String profile_add_user = "assets/profile_icon/addUser.png";
+static const String profile_share = "assets/profile_icon/share.png";
+
 }
