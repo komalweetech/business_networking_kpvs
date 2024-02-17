@@ -20,6 +20,7 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
         ),
         height: preferredSize.height,
         child: AppBar(
+          automaticallyImplyLeading: false,
           centerTitle: true,
           elevation: 0, // Set elevation to 0 if you don't want shadow
           backgroundColor: Colors.transparent,

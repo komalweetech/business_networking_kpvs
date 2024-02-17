@@ -21,24 +21,9 @@ class _AllBusinessCardScreenState extends State<AllBusinessCardScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return  const Scaffold(
       appBar: CommonAppBar(
-        actions: [
-       Padding(
-         padding:  EdgeInsets.only(top: 12),
-         child: Container(
-           alignment: Alignment.center,
-           width: kScreenWidth(context) / 1.3,
-           height: 50,
-           decoration: BoxDecoration(
-             borderRadius: BorderRadius.all(Radius.circular(10)),
-             color: Colors.white,
-           ),
-
-         ),
-       ),
-          SizedBox(width: 30,)
-        ],),
+        actions: [],),
       backgroundColor: Colors.white,
       body: Expanded(
           child: SingleChildScrollView(
