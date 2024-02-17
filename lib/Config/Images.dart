@@ -34,17 +34,18 @@ static const String profile_share = "assets/profile_icon/share.png";
 //business screen
   static const String business_background = "assets/business/business_background.jpg";
   static const String diamond_business = "assets/business/diamond.jpg";
-  static const String food_business = "assets/business/diamond.jpg";
-  static const String ca_business = "assets/business/diamond.jpg";
-  static const String consulting_business = "assets/business/diamond.jpg";
-  static const String farm_business = "assets/business/diamond.jpg";
-  static const String it_business = "assets/business/diamond.jpg";
-  static const String parlour_business = "assets/business/diamond.jpg";
-  static const String petrol_business = "assets/business/diamond.jpg";
-  static const String sand_business = "assets/business/diamond.jpg";
-  static const String textile_business = "assets/business/diamond.jpg";
-  static const String teaching_business = "assets/business/diamond.jpg";
-  static const String restaurants_business = "assets/business/diamond.jpg";
+  static const String food_business = "assets/business/food.jpeg";
+  static const String ca_business = "assets/business/ca.jpeg";
+  static const String consulting_business = "assets/business/consulting.jpeg";
+  static const String farm_business = "assets/business/farm.jpeg";
+  static const String it_business = "assets/business/it.jpeg";
+  static const String parlour_business = "assets/business/parlour.jpeg";
+  static const String petrol_business = "assets/business/petrol.jpeg";
+  static const String sand_business = "assets/business/sand.jpeg";
+  static const String textile_business = "assets/business/textile.jpeg";
+  static const String teaching_business = "assets/business/teaching.jpeg";
+  static const String restaurants_business = "assets/business/restaurants.jpeg"
+      "";
 
 
 

@@ -2,10 +2,9 @@ import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:kpvs/Config/BaseColors.dart';
 import 'package:kpvs/Config/Images.dart';
-
-import '../../../../Config/BaseColors.dart';
+import 'package:kpvs/Utils/commonWidget/common_AppBar.dart';
 import '../../../../Utils/commonWidget/common_business_card.dart';
 import '../../../../Utils/size/app_sizing.dart';
 
@@ -17,100 +16,51 @@ class AllBusinessCardScreen extends StatefulWidget {
 }
 
 class _AllBusinessCardScreenState extends State<AllBusinessCardScreen> {
+
+  final TextEditingController searchController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
+      appBar: CommonAppBar(
+        actions: [
+       Padding(
+         padding:  EdgeInsets.only(top: 12),
+         child: Container(
+           alignment: Alignment.center,
+           width: kScreenWidth(context) / 1.3,
+           height: 50,
+           decoration: BoxDecoration(
+             borderRadius: BorderRadius.all(Radius.circular(10)),
+             color: Colors.white,
+           ),
+
+         ),
+       ),
+          SizedBox(width: 30,)
+        ],),
       backgroundColor: Colors.white,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Container(
-            height: kScreenHeight(context) / 3,
-            width: kScreenWidth(context),
-            decoration: const BoxDecoration(
-                // borderRadius: BorderRadius.only(
-                //     bottomLeft: Radius.circular(40),
-                //     bottomRight: Radius.circular(40)
-                // ),
-                image: DecorationImage(
-              image: AssetImage(
-                AppImages.business_background,
-              ),
-              fit: BoxFit.cover,
-            )),
-          ),
-          const Expanded(
-            child: SingleChildScrollView(
-              child: Padding(
-                padding: EdgeInsets.only(top: 10),
-                child: Column(
-                  children: [
-                    CommonBusinessCard(
-                       images: DecorationImage(image: AssetImage(AppImages.it_business)),
-                       businessName: "Weetech institute",
-                       businessAdd: "Astha square",
-                       businessNumber: "1111111111"),
-                    CommonBusinessCard(
-                        images: DecorationImage(image: AssetImage(AppImages.teaching_business)),
-                        businessName: "Weetech institute",
-                        businessAdd: "Astha square",
-                        businessNumber: "1111111111"),
-                    CommonBusinessCard(
-                        images: DecorationImage(image: AssetImage(AppImages.restaurants_business)),
-                        businessName: "Weetech institute",
-                        businessAdd: "Astha square",
-                        businessNumber: "1111111111"),
-                    CommonBusinessCard(
-                        images: DecorationImage(image: AssetImage(AppImages.textile_business)),
-                        businessName: "Weetech institute",
-                        businessAdd: "Astha square",
-                        businessNumber: "1111111111"),
-                    CommonBusinessCard(
-                        images: DecorationImage(image: AssetImage(AppImages.sand_business)),
-                        businessName: "Weetech institute",
-                        businessAdd: "Astha square",
-                        businessNumber: "1111111111"),
-                    CommonBusinessCard(
-                        images: DecorationImage(image: AssetImage(AppImages.farm_business)),
-                        businessName: "Weetech institute",
-                        businessAdd: "Astha square",
-                        businessNumber: "1111111111"),
-                    CommonBusinessCard(
-                        images: DecorationImage(image: AssetImage(AppImages.food_business)),
-                        businessName: "Weetech institute",
-                        businessAdd: "Astha square",
-                        businessNumber: "1111111111"),
-                    CommonBusinessCard(
-                        images: DecorationImage(image: AssetImage(AppImages.parlour_business)),
-                        businessName: "Weetech institute",
-                        businessAdd: "Astha square",
-                        businessNumber: "1111111111"),
-                    CommonBusinessCard(
-                        images: DecorationImage(image: AssetImage(AppImages.petrol_business)),
-                        businessName: "Weetech institute",
-                        businessAdd: "Astha square",
-                        businessNumber: "1111111111"),
-                    CommonBusinessCard(
-                        images: DecorationImage(image: AssetImage(AppImages.consulting_business)),
-                        businessName: "Weetech institute",
-                        businessAdd: "Astha square",
-                        businessNumber: "1111111111"),
-                    CommonBusinessCard(
-                        images: DecorationImage(image: AssetImage(AppImages.ca_business)),
-                        businessName: "Weetech institute",
-                        businessAdd: "Astha square",
-                        businessNumber: "1111111111"),
-
-
-
-                  ],
-                ),
+      body: Expanded(
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: EdgeInsets.only(top: 10),
+              child: Column(
+                children: [
+                  CommonBusinessCard(images: AppImages.it_business,business_name: "Weetech institute",business_Add: "Astha squere",),
+                  CommonBusinessCard(images: AppImages.consulting_business,business_name: "it Consulting",business_Add: "Platinum Point",),
+                  CommonBusinessCard(images: AppImages.farm_business,business_name: "Khodal Farma",business_Add: "Rajkot",),
+                  CommonBusinessCard(images: AppImages.textile_business,business_name: "Avadh textile",business_Add: "Ring Rode",),
+                  CommonBusinessCard(images: AppImages.teaching_business,business_name: "Ashadeep school",business_Add: "Uttran",),
+                  CommonBusinessCard(images: AppImages.ca_business,business_name: "Shreeji Accounting",business_Add: "Silver chowk",),
+                  CommonBusinessCard(images: AppImages.restaurants_business,business_name: "Charcola dhosa",business_Add: "Sudama chowk",),
+                  CommonBusinessCard(images: AppImages.food_business,business_name: "Jalaram Food cornar",business_Add: "Vip Khavdhra gali ",),
+                  CommonBusinessCard(images: AppImages.parlour_business,business_name: "ABC parlour" ,business_Add: "Katargam",),
+                  CommonBusinessCard(images: AppImages.sand_business,business_name: "ABC sand ",business_Add: "Dhabholi",),
+                ],
               ),
             ),
-            ),
-
-        ],
-      ),
+          )
+        ),
     );
   }
 }

@@ -1,13 +1,19 @@
+import 'dart:math';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:kpvs/module/business_screen/view/screen/business_Details_screen.dart';
 
 import '../size/app_sizing.dart';
 
 class CommonBusinessCard extends StatefulWidget {
-  const CommonBusinessCard({super.key,required this.images,required this.businessName,required this.businessAdd,required this.businessNumber});
-  final DecorationImage  images;
-  final String  businessName;
-  final String businessAdd;
-  final String businessNumber;
+  const CommonBusinessCard({super.key, required this.images,required this.business_Add,required this.business_name});
+
+  final String images;
+  final String business_name;
+  final String business_Add;
 
   @override
   State<CommonBusinessCard> createState() => _CommonBusinessCardState();
@@ -16,39 +22,64 @@ class CommonBusinessCard extends StatefulWidget {
 class _CommonBusinessCardState extends State<CommonBusinessCard> {
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-      padding:  EdgeInsets.only(left: 10,right: 10,top: 08,bottom: 08),
-      child: Container(
-        height: kScreenHeight(context) / 6,
-        width: kScreenWidth(context),
-        child: Card(elevation: 20,
-
-          child: Row(
+    return Padding(
+      padding: EdgeInsets.only(left: 20, right: 20, top: 08, bottom: 08),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(14.r),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(7.r),
+          onTap: () {
+            Get.to(Business_Details_screen());
+          },
+          child: Stack(
             children: [
-              Container(
-                height:kScreenHeight(context) / 6,
-                width: kScreenWidth(context) / 3.5,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                    image: widget.images,
+              ClipRRect(
+                borderRadius: BorderRadius.circular(14.r),
+                child: SizedBox(
+                  height: kScreenHeight(context) / 4.2,
+                  width: kScreenWidth(context),
+                  child: Image.asset(widget.images,fit: BoxFit.cover,),
                 ),
               ),
-               Padding(
-                padding:  EdgeInsets.only(left: 15,right: 10,top: 13,bottom: 13),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("${widget.businessName}",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w900,color: Colors.black),),
-                    Text("${widget.businessAdd} ",style: TextStyle(fontSize: 15,color: Colors.grey),),
-                    Text("${widget.businessNumber} ",style: TextStyle(fontSize: 15,color: Colors.grey),)
-                  ],
-                ),
-              )
+              Positioned(
+                  bottom: 10,
+                  left: 10,
+                  right: 10,
+                  child: Container(
+                    height: 50.h,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10.r),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black.withOpacity(.7),
+                              blurRadius: 10,
+                              spreadRadius: 6,
+                              offset: Offset(0, 10))
+                        ]),
+                    child:  Padding(
+                      padding: EdgeInsets.only(left: 15,right: 10),
+                      child:  Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("${widget.business_name},",style: TextStyle(fontSize: 17,fontWeight: FontWeight.w600,color: Colors.black),),
+                          Row(
+                            children: [
+                              Text("${widget.business_Add}",style:  TextStyle(fontSize: 13,color: Colors.grey,fontWeight: FontWeight.w500),),
+                              SizedBox(width: 15.w,),
+                              Text("Phone Number : 1234567890",style: TextStyle(fontSize: 13,color: Colors.grey,fontWeight: FontWeight.w500),)
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
 
+                  )),
             ],
           ),
-        ),),
+        ),
+      ),
     );
   }
 }
