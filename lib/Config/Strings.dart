@@ -14,6 +14,7 @@ class AppStrings{
   static String profile_title = "Profile";
   static String drawer_Profile = "My Profile" ;
   static String drawer_Business = "Business" ;
+  static String drawer_users = "Users";
   static String drawer_Group = "Group" ;
   static String drawer_Setting = "Setting" ;
   static String drawer_AboutUs = "About Us" ;

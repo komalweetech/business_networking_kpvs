@@ -1,9 +1,8 @@
-import 'dart:math';
+
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 import 'package:kpvs/module/business_screen/view/screen/business_Details_screen.dart';
 
 import '../size/app_sizing.dart';
@@ -29,7 +28,12 @@ class _CommonBusinessCardState extends State<CommonBusinessCard> {
         child: InkWell(
           borderRadius: BorderRadius.circular(7.r),
           onTap: () {
-            Get.to(Business_Details_screen());
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => BusinessDetailScreen(businessName: widget.business_name,),
+              ),
+            );
           },
           child: Stack(
             children: [

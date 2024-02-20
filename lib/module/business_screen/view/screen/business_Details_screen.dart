@@ -1,15 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:kpvs/Utils/commonWidget/common_AppBar.dart';
 
-class Business_Details_screen extends StatefulWidget {
-  const Business_Details_screen({super.key});
+class BusinessDetailScreen extends StatefulWidget {
+  const BusinessDetailScreen({super.key,required this.businessName});
+ final String businessName;
 
   @override
-  State<Business_Details_screen> createState() => _Business_Details_screenState();
+  State<BusinessDetailScreen> createState() => _BusinessDetailScreenState();
 }
 
-class _Business_Details_screenState extends State<Business_Details_screen> {
+class _BusinessDetailScreenState extends State<BusinessDetailScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: CommonAppBar(
+      ),
+      body: Center(
+        child: Text("${widget.businessName}",style: TextStyle(fontSize: 20),),
+      ),
+    );
   }
 }

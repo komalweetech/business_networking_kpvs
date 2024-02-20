@@ -1,14 +1,15 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:kpvs/Config/BaseColors.dart';
 import 'package:kpvs/Config/Images.dart';
 import 'package:kpvs/Config/Strings.dart';
 import 'package:kpvs/module/aboutUs_screen/view/screen/aboutUs_screen.dart';
-import 'package:kpvs/module/auth/view/screen/singUp_screen.dart';
 import 'package:kpvs/module/business_screen/view/screen/add_business.dart';
 import 'package:kpvs/module/contact_us/view/screen/contactUs_screen.dart';
 import 'package:kpvs/module/group/view/screen/group_screen.dart';
 import 'package:kpvs/module/settings/view/screen/settings_screen.dart';
+
+import '../../../users/view/Screen/users_screen.dart';
 
 class DashboardDrawerWidgets extends StatefulWidget {
   const DashboardDrawerWidgets({super.key});
@@ -18,6 +19,8 @@ class DashboardDrawerWidgets extends StatefulWidget {
 }
 
 class _DashboardDrawerWidgetsState extends State<DashboardDrawerWidgets> {
+  final bool isSelected =  false;
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -28,11 +31,12 @@ class _DashboardDrawerWidgetsState extends State<DashboardDrawerWidgets> {
         children: <Widget>[
           GestureDetector(
             onTap: () {
-              print("Profile ");
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const SingUPScreen()),
-              );
+              print("Profile drawer ");
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => const SingUPScreen()),
+              // );
+              Get.toNamed('/singUp');
             },
             child: UserAccountsDrawerHeader(
                 accountName: const Text("Komal kathiriya"),
@@ -47,60 +51,79 @@ class _DashboardDrawerWidgetsState extends State<DashboardDrawerWidgets> {
             ),
           ),
           ListTile(
-            leading: const Icon(Icons.business),
+            leading:  Image.asset(AppImages.drawer_business,width: 25,height: 25,),
             title: Text("${AppStrings.drawer_Business}"),
             onTap: () {
-              print("Categories Clicked");
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const AddBusinessScreen()),
-              );
+              print("Add businesses drawer");
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(
+              //       builder: (context) => const AddBusinessScreen()),
+              // );
+              Get.toNamed('/AllBusiness');
             },
           ),
           ListTile(
-            leading: const Icon(Icons.group),
+            leading: Image.asset(AppImages.drawer_users,width: 25,height: 25,),
+            title: Text("${AppStrings.drawer_users}"),
+            onTap: () {
+              print("User drawer");
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(
+              //       builder: (context) => const UsersScreen()),
+              // );
+              Get.toNamed('/users');
+            },
+          ),
+          ListTile(
+            leading:Image.asset(AppImages.drawer_group,width: 25,height: 25,),
             title: Text("${AppStrings.drawer_Group}"),
             onTap: () {
-              print("Add Clicked");
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const GroupScreen()),
-              );
+              print("Group drawer");
+
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => const GroupScreen()),
+              // );
+              Get.toNamed('/group');
             },
           ),
           ListTile(
-            leading: const Icon(Icons.settings),
+            leading:Image.asset(AppImages.drawer_settings,width: 25,height: 25,),
             title: Text("${AppStrings.drawer_Setting}"),
             onTap: () {
-              print("About Clicked");
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const SettingsScreen()),
-              );
+              print("Settings drawer");
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => const SettingsScreen()),
+              // );
+              Get.toNamed('/settings');
             },
           ),
           ListTile(
-            leading: const Icon(Icons.person),
+            leading: Image.asset(AppImages.drawer_aboutUs,width: 25,height: 25,),
             title: Text("${AppStrings.drawer_AboutUs}"),
             onTap: () {
-              print("Share Clicked");
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const AboutUsScreen()),
-              );
+              print("About Us drawer");
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => const AboutUsScreen()),
+              // );
+              Get.toNamed('/aboutUs');
             },
           ),
           ListTile(
-            leading: const Icon(Icons.call),
+            leading:Image.asset(AppImages.drawer_conactUs,width: 25,height: 25,),
             title: Text("${AppStrings.drawer_Contact}"),
             onTap: () {
-              print("Share Clicked");
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const ContactUsScreen()),
-              );
+              print("Contact Us drawer");
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(
+              //       builder: (context) => const ContactUsScreen()),
+              // );
+              Get.toNamed('/contactUs');
             },
           ),
         ],

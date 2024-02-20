@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:kpvs/module/aboutUs_screen/view/screen/aboutUs_screen.dart';
+import 'package:kpvs/module/business_screen/view/screen/all_business_card_screen.dart';
+import 'package:kpvs/module/contact_us/view/screen/contactUs_screen.dart';
 import 'package:kpvs/module/deshboard/view/screen/dashboard_screen.dart';
+import 'package:kpvs/module/group/view/screen/group_screen.dart';
+import 'package:kpvs/module/home/view/screen/home_screen.dart';
+import 'package:kpvs/module/settings/view/screen/settings_screen.dart';
+import 'package:kpvs/module/users/view/Screen/users_screen.dart';
 import 'firebase_options.dart';
 import 'package:get/get.dart';
 import 'module/SplashScreen.dart';
 import 'module/auth/view/screen/Login_Screen.dart';
 import 'module/auth/view/screen/OTP_Screen.dart';
 import 'module/auth/view/screen/singUp_screen.dart';
+import 'module/business_screen/view/screen/add_business.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -33,11 +41,25 @@ class MyApp extends StatelessWidget {
         //  home:  LoginScreen(),
        initialRoute: '/splash', //Set initial route.
        getPages: [
+         //Splash Screen
          GetPage(name: '/splash', page: () => SplashScreen()),
+         // Auth Screen
          GetPage(name: '/login', page: () => LoginScreen()),
          GetPage(name: '/otp', page: () => OTPScreen()),
-         // GetPage(name: '/singUp', page:() =>  SingUPScreen()),
+         GetPage(name: '/singUp', page:() =>  SingUPScreen()),
+         // DeshBoard screen
          GetPage(name: '/dashBoard', page: () => DashBoardScreen()),
+         // Drawer screen
+         GetPage(name: '/AllBusinessScreen', page: () => AllBusinessCardScreen()),
+         GetPage(name: '/AllBusiness', page: () => AddBusinessScreen()),
+         GetPage(name: '/users', page: () => UsersScreen()),
+         GetPage(name: '/group', page: () => GroupScreen()),
+         GetPage(name: '/settings', page: () => SettingsScreen()),
+         GetPage(name: '/aboutUs', page: () => AboutUsScreen()),
+         GetPage(name: '/contactUs', page: () => ContactUsScreen()),
+         
+
+
        ],
      );
    },);

@@ -22,30 +22,23 @@ class _AllBusinessCardScreenState extends State<AllBusinessCardScreen> {
   @override
   Widget build(BuildContext context) {
     return  const Scaffold(
-      appBar: CommonAppBar(
-        actions: [],),
+      appBar: CommonAppBar(actions: [],),
       backgroundColor: Colors.white,
-      body: Expanded(
-          child: SingleChildScrollView(
-            child: Padding(
-              padding: EdgeInsets.only(top: 10),
-              child: Column(
-                children: [
-                  CommonBusinessCard(images: AppImages.it_business,business_name: "Weetech institute",business_Add: "Astha squere",),
-                  CommonBusinessCard(images: AppImages.consulting_business,business_name: "it Consulting",business_Add: "Platinum Point",),
-                  CommonBusinessCard(images: AppImages.farm_business,business_name: "Khodal Farma",business_Add: "Rajkot",),
-                  CommonBusinessCard(images: AppImages.textile_business,business_name: "Avadh textile",business_Add: "Ring Rode",),
-                  CommonBusinessCard(images: AppImages.teaching_business,business_name: "Ashadeep school",business_Add: "Uttran",),
-                  CommonBusinessCard(images: AppImages.ca_business,business_name: "Shreeji Accounting",business_Add: "Silver chowk",),
-                  CommonBusinessCard(images: AppImages.restaurants_business,business_name: "Charcola dhosa",business_Add: "Sudama chowk",),
-                  CommonBusinessCard(images: AppImages.food_business,business_name: "Jalaram Food cornar",business_Add: "Vip Khavdhra gali ",),
-                  CommonBusinessCard(images: AppImages.parlour_business,business_name: "ABC parlour" ,business_Add: "Katargam",),
-                  CommonBusinessCard(images: AppImages.sand_business,business_name: "ABC sand ",business_Add: "Dhabholi",),
-                ],
-              ),
-            ),
-          )
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.only(top: 10),
+          child: Column(
+            children: [
+              CommonBusinessCard(images: AppImages.it_business,business_name: "Weetech institute",business_Add: "Astha squere",),
+              CommonBusinessCard(images: AppImages.consulting_business,business_name: "it Consulting",business_Add: "Platinum Point",),
+              CommonBusinessCard(images: AppImages.farm_business,business_name: "Khodal Farma",business_Add: "Rajkot",),
+              CommonBusinessCard(images: AppImages.textile_business,business_name: "Avadh textile",business_Add: "Ring Rode",),
+              CommonBusinessCard(images: AppImages.teaching_business,business_name: "Ashadeep school",business_Add: "Uttran",),
+              CommonBusinessCard(images: AppImages.ca_business,business_name: "Shreeji Accounting",business_Add: "Silver chowk",),
+            ],
+          ),
         ),
+      ),
     );
   }
 }

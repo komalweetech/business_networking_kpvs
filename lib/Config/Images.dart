@@ -19,6 +19,12 @@ static const String bottombar_selected_wings = "assets/bottomBar_icon/selected_w
 
 //drawer icon
 static const String drawer_profile = "assets/icons/drawer_profile.png";
+static const String drawer_business = "assets/drawer_icon/business.png";
+static const String drawer_users = "assets/drawer_icon/users.png";
+static const String drawer_group = "assets/drawer_icon/group.png";
+static const String drawer_settings = "assets/drawer_icon/settings.png";
+static const String drawer_aboutUs = "assets/drawer_icon/aboutUs.png";
+static const String drawer_conactUs = "assets/drawer_icon/contactUs.png";
 
 //profile image
 static const String profile_boy = "assets/profile_icon/boy.jpg";
