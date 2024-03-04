@@ -3,13 +3,7 @@ import 'package:get/get.dart';
 import 'package:kpvs/Config/BaseColors.dart';
 import 'package:kpvs/Config/Images.dart';
 import 'package:kpvs/Config/Strings.dart';
-import 'package:kpvs/module/aboutUs_screen/view/screen/aboutUs_screen.dart';
-import 'package:kpvs/module/business_screen/view/screen/add_business.dart';
-import 'package:kpvs/module/contact_us/view/screen/contactUs_screen.dart';
-import 'package:kpvs/module/group/view/screen/group_screen.dart';
-import 'package:kpvs/module/settings/view/screen/settings_screen.dart';
 
-import '../../../users/view/Screen/users_screen.dart';
 
 class DashboardDrawerWidgets extends StatefulWidget {
   const DashboardDrawerWidgets({super.key});
@@ -60,7 +54,7 @@ class _DashboardDrawerWidgetsState extends State<DashboardDrawerWidgets> {
               //   MaterialPageRoute(
               //       builder: (context) => const AddBusinessScreen()),
               // );
-              Get.toNamed('/AllBusiness');
+              Get.toNamed('/AllBusinessScreen',arguments: true);
             },
           ),
           ListTile(

@@ -9,7 +9,9 @@ class AddBusinessScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Add Business'),
+        centerTitle: true,
+        title: const Text('Add Your Business',style: TextStyle(fontWeight: FontWeight.w800),),
+
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -30,7 +32,7 @@ class AddBusinessScreen extends StatelessWidget {
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(backgroundColor: AppColor.kPrimaryColor),
                   onPressed: () {},
-                  child: Text('Add Business',style: TextStyle(color: Colors.white),),
+                  child: const Text('Add Business',style: TextStyle(color: Colors.white),),
                 ),
               ),
             ],

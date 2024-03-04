@@ -11,7 +11,7 @@ import 'package:kpvs/Config/BaseColors.dart';
 import 'package:kpvs/Config/Images.dart';
 import 'package:kpvs/Config/Strings.dart';
 import 'package:kpvs/Utils/commonWidget/commonTextLabel.dart';
-import 'package:kpvs/Utils/commonWidget/common_outline_button.dart';
+
 import 'package:kpvs/Utils/divider/common_vertical_divider.dart';
 import 'package:kpvs/Utils/size/app_sizing.dart';
 import 'package:kpvs/module/business_screen/view/screen/all_business_card_screen.dart';
@@ -422,46 +422,46 @@ class _SingUPScreenState extends State<SingUPScreen> {
                   SizedBox(
                     height: 10.h,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Container(
-                        decoration: const BoxDecoration(
-                          color: Color(0xffd5e9db),
-                          borderRadius: BorderRadius.all(Radius.circular(80)),
-                        ),
-                        height: 35.h,
-                        width: 35.h,
-                        child: Padding(
-                          padding: EdgeInsets.all(10),
-                          child: Image.asset(
-                            AppImages.profile_team,
-                            color: AppColor.kPrimaryColor,
+                  GestureDetector(
+                    onTap: () {
+                      Get.to(const AllBusinessCardScreen(allBusinessScreen: false,));
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Container(
+                          decoration: const BoxDecoration(
+                            color: Color(0xffd5e9db),
+                            borderRadius: BorderRadius.all(Radius.circular(80)),
+                          ),
+                          height: 35.h,
+                          width: 35.h,
+                          child: Padding(
+                            padding: EdgeInsets.all(10),
+                            child: Image.asset(
+                              AppImages.profile_team,
+                              color: AppColor.kPrimaryColor,
+                            ),
                           ),
                         ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 15.r),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "All Business",
-                              style: TextStyle(
-                                  color: AppColor.textBlackColor,
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.w500),
-                            )
-                          ],
+                        Padding(
+                          padding: EdgeInsets.only(left: 15.r),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "All Business",
+                                style: TextStyle(
+                                    color: AppColor.textBlackColor,
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.w500),
+                              )
+                            ],
+                          ),
                         ),
-                      ),
-                      Spacer(),
-                      GestureDetector(
-                        onTap: () {
-                          Get.to(AllBusinessCardScreen());
-                        },
-                        child:   Container(
+                        Spacer(),
+                        Container(
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.all(Radius.circular(80)),
                               color: Color(0xffd5e9db),
@@ -475,10 +475,10 @@ class _SingUPScreenState extends State<SingUPScreen> {
                               color: AppColor.kPrimaryColor,
                             ),
                           ),
-                        ),
-                      )
-
-                    ],
+                        )
+                    
+                      ],
+                    ),
                   ),
                   SizedBox(
                     height: 10.h,

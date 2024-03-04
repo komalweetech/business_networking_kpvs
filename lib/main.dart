@@ -42,21 +42,21 @@ class MyApp extends StatelessWidget {
        initialRoute: '/splash', //Set initial route.
        getPages: [
          //Splash Screen
-         GetPage(name: '/splash', page: () => SplashScreen()),
+         GetPage(name: '/splash', page: () => const SplashScreen()),
          // Auth Screen
-         GetPage(name: '/login', page: () => LoginScreen()),
-         GetPage(name: '/otp', page: () => OTPScreen()),
-         GetPage(name: '/singUp', page:() =>  SingUPScreen()),
+         GetPage(name: '/login', page: () => const LoginScreen()),
+         GetPage(name: '/otp', page: () => const OTPScreen()),
+         GetPage(name: '/singUp', page:() => const SingUPScreen()),
          // DeshBoard screen
-         GetPage(name: '/dashBoard', page: () => DashBoardScreen()),
+         GetPage(name: '/dashBoard', page: () => const DashBoardScreen()),
          // Drawer screen
-         GetPage(name: '/AllBusinessScreen', page: () => AllBusinessCardScreen()),
-         GetPage(name: '/AllBusiness', page: () => AddBusinessScreen()),
-         GetPage(name: '/users', page: () => UsersScreen()),
-         GetPage(name: '/group', page: () => GroupScreen()),
-         GetPage(name: '/settings', page: () => SettingsScreen()),
-         GetPage(name: '/aboutUs', page: () => AboutUsScreen()),
-         GetPage(name: '/contactUs', page: () => ContactUsScreen()),
+         GetPage(name: '/AllBusinessScreen', page: () => const AllBusinessCardScreen()),
+         GetPage(name: '/AddBusiness', page: () => const AddBusinessScreen()),
+         GetPage(name: '/users', page: () => const UsersScreen()),
+         GetPage(name: '/group', page: () => const GroupScreen()),
+         GetPage(name: '/settings', page: () => const SettingsScreen()),
+         GetPage(name: '/aboutUs', page: () => const AboutUsScreen()),
+         GetPage(name: '/contactUs', page: () => const ContactUsScreen()),
          
 
 

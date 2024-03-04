@@ -36,6 +36,7 @@ static const String profile_team = "assets/profile_icon/team.png";
 static const String profile_person = "assets/profile_icon/person.png";
 static const String profile_add_user = "assets/profile_icon/addUser.png";
 static const String profile_share = "assets/profile_icon/share.png";
+static const String Profile_Address = "assets/profile_icon/address.png";
 
 //business screen
   static const String business_background = "assets/business/business_background.jpg";
@@ -50,8 +51,10 @@ static const String profile_share = "assets/profile_icon/share.png";
   static const String sand_business = "assets/business/sand.jpeg";
   static const String textile_business = "assets/business/textile.jpeg";
   static const String teaching_business = "assets/business/teaching.jpeg";
-  static const String restaurants_business = "assets/business/restaurants.jpeg"
-      "";
+  static const String restaurants_business = "assets/business/restaurants.jpeg";
+
+  //logo for business card
+   static const String logo = "assets/icons/logo.png";
 
 
 

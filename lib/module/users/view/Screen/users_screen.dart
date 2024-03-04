@@ -16,6 +16,7 @@ class _UsersScreenState extends State<UsersScreen> {
   Widget build(BuildContext context) {
     return const Scaffold(
       appBar: CommonAppBar(
+        title: "Users Screen",
         actions: [],),
       backgroundColor: Colors.white,
       body: Column(
