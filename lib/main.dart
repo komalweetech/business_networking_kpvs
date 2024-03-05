@@ -36,8 +36,7 @@ class MyApp extends StatelessWidget {
      return GetMaterialApp(
        debugShowCheckedModeBanner: false,
          title: 'Flutter Demo',
-         theme: ThemeData(
-         ),
+         theme: ThemeData(),
         //  home:  LoginScreen(),
        initialRoute: '/splash', //Set initial route.
        getPages: [
@@ -51,7 +50,7 @@ class MyApp extends StatelessWidget {
          GetPage(name: '/dashBoard', page: () => const DashBoardScreen()),
          // Drawer screen
          GetPage(name: '/AllBusinessScreen', page: () => const AllBusinessCardScreen()),
-         GetPage(name: '/AddBusiness', page: () => const AddBusinessScreen()),
+         GetPage(name: '/AddBusiness', page: () => const AddBusiness()),
          GetPage(name: '/users', page: () => const UsersScreen()),
          GetPage(name: '/group', page: () => const GroupScreen()),
          GetPage(name: '/settings', page: () => const SettingsScreen()),

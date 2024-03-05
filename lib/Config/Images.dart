@@ -18,6 +18,7 @@ static const String bottombar_selected_meeting = "assets/bottomBar_icon/selected
 static const String bottombar_selected_wings = "assets/bottomBar_icon/selected_wings.png";
 
 //drawer icon
+  static const String drawer = "assets/drawer_icon/drawer.png";
 static const String drawer_profile = "assets/icons/drawer_profile.png";
 static const String drawer_business = "assets/drawer_icon/business.png";
 static const String drawer_users = "assets/drawer_icon/users.png";

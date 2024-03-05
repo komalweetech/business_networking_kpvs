@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../../Utils/commonWidget/common_AppBar.dart';
+
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
 
@@ -11,6 +13,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CommonAppBar(
+        title: "Setting",
+        actions: [],),
       body: Center(
         child: Text("Settings")
       ),

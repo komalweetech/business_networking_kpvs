@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:kpvs/Config/BaseColors.dart';
+import 'package:kpvs/module/users/view/Screen/takeBusinessTab.dart';
 
 import '../../../../Config/Images.dart';
 import '../../../../Utils/commonWidget/common_AppBar.dart';
 import '../../../../Utils/commonWidget/common_business_card.dart';
+import 'giveBusinessTab.dart';
 
 class UsersScreen extends StatefulWidget {
   const UsersScreen({super.key});
@@ -14,37 +18,61 @@ class UsersScreen extends StatefulWidget {
 class _UsersScreenState extends State<UsersScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: CommonAppBar(
-        title: "Users Screen",
-        actions: [],),
-      backgroundColor: Colors.white,
-      body: Column(
-        children: [
-          Expanded(
-              child: SingleChildScrollView(
-                child: Padding(
-                  padding: EdgeInsets.only(top: 10),
-                  child: Column(
-                    children: [
-                      CommonBusinessCard(images: AppImages.textile_business,business_name: "Avadh textile",business_Add: "Ring Rode",),
-                      CommonBusinessCard(images: AppImages.restaurants_business,business_name: "Charcola dhosa",business_Add: "Sudama chowk",),
-                      CommonBusinessCard(images: AppImages.food_business,business_name: "Jalaram Food cornar",business_Add: "Vip Khavdhra gali ",),
-                      CommonBusinessCard(images: AppImages.parlour_business,business_name: "ABC parlour" ,business_Add: "Katargam",),
-                      CommonBusinessCard(images: AppImages.sand_business,business_name: "ABC sand ",business_Add: "Dhabholi",),
-                      CommonBusinessCard(images: AppImages.it_business,business_name: "Weetech institute",business_Add: "Astha squere",),
-                      CommonBusinessCard(images: AppImages.consulting_business,business_name: "it Consulting",business_Add: "Platinum Point",),
-                      CommonBusinessCard(images: AppImages.farm_business,business_name: "Khodal Farma",business_Add: "Rajkot",),
-                      CommonBusinessCard(images: AppImages.ca_business,business_name: "Shreeji Accounting",business_Add: "Silver chowk",),
-                      CommonBusinessCard(images: AppImages.teaching_business,business_name: "Ashadeep school",business_Add: "Uttran",),
-
+    return DefaultTabController(
+        length: 2,
+        child: Scaffold(
+            appBar: AppBar(
+              backgroundColor: AppColor.kPrimaryColor,
+              centerTitle: true,
+              title: const Text(
+                'User',
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white),
+              ),
+              leading: IconButton(
+                icon: const Icon(
+                  Icons.arrow_back_rounded,
+                  color: Colors.white,
+                  size: 25,
+                ),
+                // Use leadingIcon if provided, otherwise default to Icons.arrow_back_rounded
+                onPressed: () {
+                  Get.back();
+                }, // Call the callback function
+              ),
+              bottom: PreferredSize(
+                preferredSize: const Size.fromHeight(130),
+                child: Material(
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(20),
+                      bottomRight: Radius.circular(20),
+                    ),
+                  ),
+                  elevation: 4, // Add elevation to create a shadow effect
+                  child: TabBar(
+                    indicatorColor: AppColor.kPrimaryColor,
+                    labelColor: AppColor.kPrimaryColor,
+                    tabs: const [
+                      Tab(
+                        icon: Icon(Icons.business),
+                        text: 'Give Business',
+                      ),
+                      Tab(
+                        icon: Icon(Icons.business_center),
+                        text: 'Take Business',
+                      ),
                     ],
                   ),
                 ),
-              )
-          ),
-        ],
-      ),
-    );;
+              ),
+            ),
+            backgroundColor: Colors.white,
+            body: const TabBarView(children: [
+              GiveBusinessTab(), // Content for the first tab
+              TakeBusinessTab(),
+            ])));
   }
 }

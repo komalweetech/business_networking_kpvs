@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../../Utils/commonWidget/common_AppBar.dart';
+
 class GroupScreen extends StatefulWidget {
   const GroupScreen({super.key});
 
@@ -10,7 +12,10 @@ class GroupScreen extends StatefulWidget {
 class _GroupScreenState extends State<GroupScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
+      appBar: CommonAppBar(
+        title: "Group",
+        actions: [],),
       body: Center(
         child: Text("Group"),
       ),

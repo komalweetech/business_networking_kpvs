@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../../Utils/commonWidget/common_AppBar.dart';
+
 class AboutUsScreen extends StatefulWidget {
   const AboutUsScreen({super.key});
 
@@ -11,6 +13,9 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CommonAppBar(
+        title: "About Us",
+        actions: [],),
       body: Center(
         child: Text("About Us"),
       ),
