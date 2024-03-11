@@ -19,6 +19,7 @@ class AppStrings{
   static String drawer_Setting = "Setting" ;
   static String drawer_AboutUs = "About Us" ;
   static String drawer_Contact = "Contact Us";
+  static String drawer_TurnOver =" TurnOver";
 
   //Profile screen
   static String email = "Email";
