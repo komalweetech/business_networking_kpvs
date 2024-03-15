@@ -1,5 +1,5 @@
-import 'dart:async';
-import 'dart:developer';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -8,6 +8,8 @@ import 'package:kpvs/Config/Images.dart';
 import 'package:kpvs/Config/Strings.dart';
 
 import '../../dependencies/auth_dependencies.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'package:contacts_service/contacts_service.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -186,22 +188,25 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ],
               ),
-              Text.rich(TextSpan(
-                  text: AppStrings.contacts_to_get_a,
-                  style: TextStyle(fontSize: 15.r, fontWeight: FontWeight.bold),
-                  children: <InlineSpan>[
-                    TextSpan(
-                      text: AppStrings.invite,
-                      style: TextStyle(
-                          fontSize: 15.r,
-                          fontWeight: FontWeight.bold,
-                          color: AppColor.kPrimaryColor),
-                    )
-                  ]))
+              GestureDetector(
+                onTap: () {},
+                child: Text.rich(TextSpan(
+                    text: AppStrings.contacts_to_get_a,
+                    style: TextStyle(fontSize: 15.r, fontWeight: FontWeight.bold),
+                    children: <InlineSpan>[
+                      TextSpan(
+                        text: AppStrings.invite,
+                        style: TextStyle(
+                            fontSize: 15.r,
+                            fontWeight: FontWeight.bold,
+                            color: AppColor.kPrimaryColor),
+                      )
+                    ])),
+              ),
             ],
           ),
           Text(
-            AppStrings.set_attende_meeting,
+            AppStrings.set_attend_meeting,
             style: TextStyle(
                 color: Colors.black,
                 fontSize: 15.r,

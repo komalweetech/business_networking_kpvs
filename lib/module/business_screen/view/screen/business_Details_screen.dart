@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kpvs/Config/BaseColors.dart';
 import 'package:kpvs/Config/Images.dart';
-import 'package:kpvs/Utils/commonWidget/common_AppBar.dart';
+import 'package:kpvs/Utils/commonWidget/common_simple_appbar.dart';
 import 'package:kpvs/Utils/size/app_sizing.dart';
 import 'package:kpvs/module/business_screen/view/widgets/details_container.dart';
 

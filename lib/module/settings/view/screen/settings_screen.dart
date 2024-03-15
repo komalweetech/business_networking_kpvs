@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../Utils/commonWidget/common_AppBar.dart';
+import '../../../../Utils/commonWidget/common_simple_appbar.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});

@@ -5,10 +5,8 @@ import 'package:kpvs/module/aboutUs_screen/view/screen/aboutUs_screen.dart';
 import 'package:kpvs/module/business_screen/view/screen/all_business_card_screen.dart';
 import 'package:kpvs/module/contact_us/view/screen/contactUs_screen.dart';
 import 'package:kpvs/module/deshboard/view/screen/dashboard_screen.dart';
-import 'package:kpvs/module/group/view/screen/group_screen.dart';
-import 'package:kpvs/module/home/view/screen/home_screen.dart';
+import 'package:kpvs/module/group/view/screen/group_drawer.dart';
 import 'package:kpvs/module/settings/view/screen/settings_screen.dart';
-import 'package:kpvs/module/users/view/Screen/users_screen.dart';
 import 'firebase_options.dart';
 import 'package:get/get.dart';
 import 'module/SplashScreen.dart';
@@ -16,6 +14,8 @@ import 'module/auth/view/screen/Login_Screen.dart';
 import 'module/auth/view/screen/OTP_Screen.dart';
 import 'module/auth/view/screen/singUp_screen.dart';
 import 'module/business_screen/view/screen/add_business.dart';
+import 'module/turnOver/view/Screen/turnOver_screen.dart';
+import 'module/user/view/screen/user_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -51,8 +51,9 @@ class MyApp extends StatelessWidget {
          // Drawer screen
          GetPage(name: '/AllBusinessScreen', page: () => const AllBusinessCardScreen()),
          GetPage(name: '/AddBusiness', page: () => const AddBusiness()),
-         GetPage(name: '/users', page: () => const UsersScreen()),
-         GetPage(name: '/group', page: () => const GroupScreen()),
+         GetPage(name: '/TurnOver', page: () => const TurnOverScreen()),
+         GetPage(name: '/user', page: () => const UserScreen()),
+         GetPage(name: '/group', page: () => const GroupDrawer()),
          GetPage(name: '/settings', page: () => const SettingsScreen()),
          GetPage(name: '/aboutUs', page: () => const AboutUsScreen()),
          GetPage(name: '/contactUs', page: () => const ContactUsScreen()),

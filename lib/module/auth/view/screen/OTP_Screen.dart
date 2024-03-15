@@ -4,6 +4,7 @@ import 'dart:developer';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -105,29 +106,30 @@ class _OTPScreenState extends State<OTPScreen> {
                           },
                         ),
                         SizedBox(height: 32.r,),
-                        Container(
-                            margin: EdgeInsets.symmetric(horizontal: 20.r),
-                            height: 40.r,
-                            width: 1.sw,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.all(Radius.circular(10.r)),
-                                color: AppColor.kPrimaryColor),
-                            child: GestureDetector(
-                                onTap: ()  {
-                                  log("Navigate to signup screen");
-                                  try {
-                                    Get.toNamed('/dashBoard');
-                                  } catch (e) {
-                                    log("Error navigating to signup screen: $e");
-                                  }
-                                },
-                                child: Center(
-                                  child: Text(
-                                    "Verify",
-                                    style: TextStyle(
-                                        color: Colors.white, fontSize: 18.r),
-                                  ),
-                                ))),
+                        GestureDetector(
+                          onTap: ()  {
+                            log("Navigate to signup screen");
+                            try {
+                              Get.toNamed('/dashBoard');
+                            } catch (e) {
+                              log("Error navigating to signup screen: $e");
+                            }
+                          },
+                          child: Container(
+                              margin: EdgeInsets.symmetric(horizontal: 20.r),
+                              height: 40.r,
+                              width: 1.sw,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.all(Radius.circular(10.r)),
+                                  color: AppColor.kPrimaryColor),
+                              child: Center(
+                                child: Text(
+                                  "Verify",
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 18.r),
+                                ),
+                              )),
+                        ),
                         SizedBox(
                           height: 40.r,
                         ),
