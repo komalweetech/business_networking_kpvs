@@ -16,27 +16,26 @@ class CommonTurnOverCard extends StatelessWidget {
       child: Container(
         height: 130.h,
         child: Card(
-          color: AppColor.kSecondPrimaryColor,
+          color: AppColor.textWhiteColor,
           child: Padding(
             padding: EdgeInsets.symmetric(vertical: 13.r, horizontal: 13.r),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                 Text(businessName, style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
-                ),
+                 Row(
+                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                   children: [
+                     Text(businessName, style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900),),
+                     Text(date, style: TextStyle(
+                         color: AppColor.textBlackColor,
+                         fontSize: 15,
+                         fontWeight: FontWeight.w500),
+                     ),
+                   ],
+                 ),
                 SizedBox(height: 10.h,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Person: ${personName} ", style: TextStyle(
-                        fontSize: 16, color: AppColor.textBlackColor),
-                    ),
-                    Text(date, style: TextStyle(
-                        color: AppColor.textBlackColor,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w500),
-                    ),
-                  ],
+                Text("Person: ${personName} ", style: TextStyle(
+                    fontSize: 16, color: AppColor.textBlackColor),
                 ),
                 Row(
                   children: [
@@ -47,7 +46,8 @@ class CommonTurnOverCard extends StatelessWidget {
                         fontSize: 16, color: AppColor.textBlackColor),
                     )
                   ],
-                )
+                ),
+                Text("Business type: ${"V2V"}",style: TextStyle(fontSize: 16, color: AppColor.textBlackColor),)
               ],
             ),
           ),

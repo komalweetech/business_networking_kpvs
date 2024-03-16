@@ -13,6 +13,8 @@ class AppColor{
 
    static Color textBlackColor = const Color(0xff000000);
    static Color textWhiteColor = const Color(0xffffffff);
+   static Color textfieldBoderColor = const Color(0xff444444);
+   static Color textfieldBackgroundColor = const Color(0xffedf0f9);
    static Color semiTitleColor = const Color(0xffa0cbab);
    static Color cancelbutton = const Color(0xffec5555);
 }

@@ -1,8 +1,6 @@
-import 'dart:math';
 
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kpvs/Config/BaseColors.dart';
 import 'package:kpvs/Utils/commonWidget/common_simple_appbar.dart';
@@ -18,7 +16,7 @@ class _UserDetailScreenState extends State<UserDetailScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: CommonAppBar(title: "User Details",),
+      appBar: const CommonAppBar(title: "User Details",),
       body: Padding(
         padding:  EdgeInsets.symmetric(vertical: 15.r,horizontal: 15.r),
         child: SingleChildScrollView(

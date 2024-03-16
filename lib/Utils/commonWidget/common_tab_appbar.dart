@@ -33,12 +33,12 @@ class _CommonTabAppbarState extends State<CommonTabAppbar> {
       backgroundColor: AppColor.kPrimaryColor,
       centerTitle: true,
       title:  Padding(
-        padding:  EdgeInsets.only(top: 25.r),
+        padding:  EdgeInsets.only(top: 20.r),
         child:  Text(widget.title, style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500, color: Colors.white),
         ),
       ),
       leading: Padding(
-        padding:  EdgeInsets.only(top: 25.r),
+        padding:  EdgeInsets.only(top: 20.r),
         child: IconButton(
           icon: const Icon(
             Icons.arrow_back_rounded,

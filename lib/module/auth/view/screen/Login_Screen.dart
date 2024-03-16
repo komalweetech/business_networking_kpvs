@@ -8,8 +8,7 @@ import 'package:kpvs/Config/Images.dart';
 import 'package:kpvs/Config/Strings.dart';
 
 import '../../dependencies/auth_dependencies.dart';
-import 'package:permission_handler/permission_handler.dart';
-import 'package:contacts_service/contacts_service.dart';
+
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
